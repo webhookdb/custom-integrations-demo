@@ -1,0 +1,20 @@
+version: "3.4"
+
+services:
+  test_db:
+    image: "postgres:16"
+    ports:
+      - "18066:5432"
+    environment:
+      POSTGRES_USER: 'webhookdb'
+      POSTGRES_PASSWORD: 'webhookdb'
+      POSTGRES_DB: 'webhookdb_test'
+  redis:
+    image: "redis:7"
+    ports:
+      - "18067:6379"
+  mailpit:
+    image: "axllent/mailpit"
+    ports:
+      - "18071:8025"
+      - "18072:1025"

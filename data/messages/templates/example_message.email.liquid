@@ -1,0 +1,10 @@
+{% expose subject %}Custom Message{% endexpose %}
+
+{% partial 'greeting' %}
+
+<p>This is an example of how to build a custom message that is sent from your code.</p>
+<p>This message uses <a href="https://shopify.github.io/liquid/">Liquid templating</a>.</p>
+<p>The view model for this message is in lib/webhookdb/messages/example_message.rb.</p>
+<p>You can add custom variables by overriding 'liquid_drops' on the view model (this is 'service_name': {{ service_name }}.</p>
+
+{% partial 'signoff' %}
